@@ -49,15 +49,15 @@ export class ArticleService {
 			.toPromise<Article>()
 			.then<any>((data: any | Response): Promise<Article> => {
 				debugger
-				console.log(data.status);
 				return Promise.resolve(data);
 			})
 			.catch((error: HttpErrorResponse) => {
+				debugger
 				return Promise.reject(error);
 			});
 	}
 	updateArticles(articles: Article[]) {
-		return this._http.post<Article>(UPDATE_ALL_ARTICLESS_URL, articles)
+		return this._http.put<Article>(UPDATE_ALL_ARTICLESS_URL, articles)
 			.toPromise<Article>()
 			.then<any>((data: any | Response): Promise<Article> => {
 				return Promise.resolve(data);

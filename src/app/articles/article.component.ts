@@ -54,7 +54,7 @@ export class ArticleComponent implements OnInit {
     if (this.articleUpdateId == null) {
       let article = new Article(null, title, category);
       this.articleService.createArticle(article).then((_article: Article | any) => {
-        this.allArticles.push(_article);
+        this.allArticles.unshift(_article);
         this.backToCreateArticle();
       })
         .catch(function genericError(error) {
