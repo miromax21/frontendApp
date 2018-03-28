@@ -1,0 +1,10 @@
+<div class="dropdown base-dropdown" [ngClass]="{expand: expand}">
+    <div class="dropdown-toggle" (click)="Toggle($event)" [ngClass]="toggleClass">
+        <ng-content select=".title"></ng-content>
+    </div>
+    <div class="list-wrapper" #popup>
+        <div class="dropdown-list">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

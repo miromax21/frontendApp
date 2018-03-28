@@ -1,0 +1,112 @@
+@import '~styles/variables.less';
+@import '~styles/mixins.less';
+
+footer {
+    height: auto;
+    background: @color-grayish-5;
+    font-size: 12px;
+    overflow: visible;
+
+    .container {
+        padding: 0 15px;
+    }
+
+    a {
+
+        &:hover, &:active {
+            color: @color-white;
+        }
+    }
+
+    a[href^="mailto"], .additional-info a {
+        &:hover, &:active {
+            border-bottom: none;
+        }
+    }
+
+    h3 {
+        color: @color-yellow-3;
+        font-size: 12px;
+        font-weight: normal;
+        font-family: @font-verdana;
+        text-transform: uppercase;
+        line-height: 25px;
+    }
+
+    address {
+        font-style: normal;
+        width: 100%;
+        line-height: 25px;
+        color: @color-white;
+    }
+
+    address, .links {
+        padding-top: 15px;
+    }
+
+    .links {
+        line-height: 9px;
+        margin: 0 15px;
+        position: relative;
+
+        & > div {
+            float: left;
+            margin-right: 80px;
+            max-width: 146px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        li {
+            margin-top: 11px;
+        }
+    }
+
+    .social-buttons {
+        margin: 8px 0 14px 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                margin-right: 10px;
+                font-size: 20px;
+                color: @color-grayish-2;
+
+                &:hover, &:active {
+                    color: @color-white;
+                }
+            }
+        }
+    }
+    .additional-info {
+        background: @color-grayish-4;
+        padding: 19px 0 11px;
+        color: @color-grayish-1;
+
+        a {
+            color: @color-grayish-1;
+        }
+
+        .left-col > div {
+            line-height: 20px;
+        }
+
+        .copyright {
+            font-size: 14px;
+        }
+
+        .right-col {
+            margin: 14px 2px 0 0;
+        }
+
+        .tns {
+            color: @color-grayish-1;
+            font-size: 30px;
+            margin-right: 15px;
+        }
+    }
+}

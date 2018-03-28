@@ -1,0 +1,25 @@
+<div class="container authorized">
+    <div>
+        <nav>
+            <a [routerLink]="routingConsts.root" class="logo logo-auth pull-left show"></a>
+            <ul>
+                <li class="pull-left">
+                    <a [routerLink]="advertId + '/' + routingConsts.campaign + (campaignId ? '/' + campaignId : '')" class="nav-link" i18n>Мои кампании</a>
+                </li>
+                <li class="pull-left"><a [routerLink]="advertId + '/' + routingConsts.campaign + (campaignId ? '/' + campaignId : '')" [queryParams]="{a:1}" class="nav-link" i18n>Мои кампании</a></li>
+            </ul>
+
+            <div class="dropdown" [ngClass]="{expand: expand}">
+                <div class="dropdown-toggle user-name-wrapper" (click)="MenuToggle($event)">
+                    <span class="user-name user icon truncate">{{userName}}</span>
+                </div>
+                <div class="list-wrapper">
+                    <ul class="dropdown-list">
+                        <li><a (click)="SignOut()" class="logout" i18n>Выход</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </nav>
+    </div>
+</div>

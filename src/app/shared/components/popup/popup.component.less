@@ -1,0 +1,38 @@
+@import '~styles/variables.less';
+@import '~styles/mixins.less';
+:host ::ng-deep {
+    .popup .close{
+        position: absolute;
+        right: -35px;
+        top: -35px;
+    }
+}
+.popup{
+    display: none;
+
+    &.show{
+        display:block;
+        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000000bd;
+        z-index: 20;
+    }
+    .popup-wrapper {
+        position: relative;
+        background-color:@color-white;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-animation: ngdialog-fadein 0.5s;
+        -moz-animation: ngdialog-fadein 0.5s;
+        -o-animation: ngdialog-fadein 0.5s;
+        animation: ngdialog-fadein 0.5s;
+        pointer-events: all;
+        z-index: 11;
+    }
+
+}

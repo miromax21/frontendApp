@@ -1,0 +1,14 @@
+<ng-content></ng-content>
+<expandable class="dropdown-wrapper" toggleClass="input-base truncate {{selectedOptionClass}}">
+    <span class="title">
+        <ng-container *ngIf="!valueTemplate">{{selectedValue}}</ng-container>
+        <ng-template [ngTemplateOutlet]="valueTemplate" [ngTemplateOutletContext]="{ $implicit: selectedValue}" *ngIf="valueTemplate"></ng-template>
+        <span class="caret pull-right"></span>
+    </span>
+    <ul>
+        <li *ngFor="let option of options" (click)="Change(option);" class="{{option.className}}">
+            <ng-container *ngIf="!valueTemplate">{{option.key}}</ng-container>
+            <ng-template [ngTemplateOutlet]="valueTemplate" [ngTemplateOutletContext]="{ $implicit: option.key}" *ngIf="valueTemplate"></ng-template>
+        </li>
+    </ul>
+</expandable>
