@@ -1,5 +1,9 @@
-import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Injector, LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import { INITIAL_STATE, StoreModule } from '@ngrx/store';
+import localeRu from '@angular/common/locales/ru';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -7,11 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './articles/article.component';
 import { ArticleService } from './articles/article.service';
+import { AuthorizationService } from './authorization/authorization.service';
+import { HomeComponent } from './home.component';
 import {
       SharedModule,
       ServiceLocator,
-      // LocalStorageService,
-      // LocalStorageEnum,
+      LocalStorageService,
+      LocalStorageEnum
       // userStateReducer,
       // currentAdvertReducer,
       // currentCampaignReducer,
@@ -20,6 +26,12 @@ import {
 import { PageNotFoundComponent } from './page-not-found.component';
 
 @NgModule({
+      declarations: [
+            AppComponent,
+            PageNotFoundComponent,
+            ArticleComponent,
+            HomeComponent
+      ],
       imports: [
             BrowserModule,
             SharedModule.forRoot(),
@@ -27,13 +39,9 @@ import { PageNotFoundComponent } from './page-not-found.component';
             HttpModule,
             ReactiveFormsModule
       ],
-      declarations: [
-            AppComponent,
-            PageNotFoundComponent,
-            ArticleComponent
-      ],
       providers: [
-            ArticleService
+            ArticleService,
+            AuthorizationService
       ],
       bootstrap: [
             AppComponent

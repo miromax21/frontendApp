@@ -1,0 +1,56 @@
+<div class="container">
+
+    <form novalidate name="form" (ngSubmit)="Submit()">
+
+        <h1 i18n>Авторизация</h1>
+
+        <div>
+            <div class="tooltip-wrapper-container right">
+                <input id="username" class="input-base" name="username" placeholder="Логин" type="text" [(ngModel)]="model.username" #username="ngModel"
+                    required />
+                <!-- <div class="error-wrapper" [hidden]="username.valid || username.untouched">
+                    <span class="tooltip error" i18n>
+                        Заполните поле "Логин"
+                    </span>
+                </div> -->
+            </div>
+        </div>
+
+        <div>
+            <div class="tooltip-wrapper-container right">
+                <input id="password" class="input-base" name="password" type="password" placeholder="Пароль" i18n-placeholder [(ngModel)]="model.password"
+                    #password="ngModel" required />
+                <!-- <div class="error-wrapper" [hidden]="password.valid || password.untouched">
+                    <span class="tooltip error" i18n>
+                        Заполните поле "Пароль"
+                    </span>
+                </div> -->
+            </div>
+        </div>
+
+
+
+        <div class="error-message-wrapper">
+            <!-- <div class="error-message" [hidden]="!hasLoginError">
+                <div class="error-text" i18n>Ошибка авторизации. Проверьте логин и пароль!</div>
+            </div>
+            <div class="error-message" [hidden]="!hasAccessError">
+                <div class="error-text" i18n>У Вас недостаточно прав для пользования данным ресурсом!</div>
+            </div> -->
+        </div>
+
+        <div class="buttons">
+            <!-- <a class="forgot-pass">Восстановить пароль</a> -->
+            <button class="default-button pull-right" i18n>
+                Войти
+            </button>
+            <!-- <button class="default-button pull-right" [disabled]="login.invalid || password.invalid" [ngClass]="{'loader': inProcess}"
+                i18n>
+                Войти
+            </button> -->
+            <div class="clearfix"></div>
+        </div>
+
+    </form>
+
+</div>

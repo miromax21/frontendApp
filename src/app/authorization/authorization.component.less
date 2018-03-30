@@ -1,0 +1,57 @@
+@import '../../styles/variables.less';
+@import '../../styles/mixins.less';
+
+form {
+    max-width: 272px;
+    position: relative;
+    display: block;
+    margin: 20px auto 40px;
+
+    h1{
+        text-align: center;
+        margin: 40px auto;
+        max-width: 272px;
+        font: 32px/36px @font-robotoCondensed;
+    }
+
+
+    .error-message-wrapper {
+        margin: 14px 0 0;
+        
+    }
+    .error-wrapper{
+        position: absolute;
+        min-width: 230px;
+        top: 50%;
+        .translate(-100%,-50%);
+    }
+    .tooltip{
+        width: 200px;
+        &.error{
+            left: -10px;
+            float: right;
+            background-color: @color-red-1;
+            &:after{
+                right: -27px;
+                border-left-color:@color-red-1;
+            }
+        }
+    }
+    .tooltip-wrapper-container {
+        margin-top: 20px;    }
+    .buttons {
+        margin-top: 20px;
+    }
+}
+
+.input-base {
+    width: 100%;
+}
+
+.forgot-pass {
+    // color: @color-gray-3; 
+    font-size: 12px;
+    // text-decoration: none;
+    line-height: 35px;
+    cursor: pointer;
+}

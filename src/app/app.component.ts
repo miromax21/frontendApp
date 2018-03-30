@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    template: `
+  selector: 'app-root',
+  template: `
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class='container'>
       <ul class="nav navbar-nav">
@@ -22,7 +22,6 @@ import { Component } from '@angular/core';
     </div>
   </nav>
   <router-outlet></router-outlet>
-
              `
 })
 export class AppComponent {

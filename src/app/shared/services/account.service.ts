@@ -23,13 +23,14 @@ export class AccountService {
   }
 
   Set(user: IAccount): void {
-    this._localStorageService.Set<IAccount>(LocalStorageEnum.user, user);
-    this._store.dispatch({ type: STORE_TYPES.CHANGE_USER, payload: user });
+    debugger
+    // this._localStorageService.Set<IAccount>(LocalStorageEnum.userMy, user);
+    // this._store.dispatch({ type: STORE_TYPES.CHANGE_USER, payload: user });
   }
 
   Reset(): void {
-    this._localStorageService.Reset(LocalStorageEnum.user);
-    this._store.dispatch({ type: STORE_TYPES.CHANGE_USER, payload: null });
+    //this._localStorageService.Reset(LocalStorageEnum.userMy);
+    // this._store.dispatch({ type: STORE_TYPES.CHANGE_USER, payload: null });
 
   }
 

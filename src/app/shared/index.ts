@@ -1,10 +1,10 @@
 ﻿export { SharedModule } from './shared.module';
-// export { IAuthorization } from './interfaces/i-authorization.interface';
+export { IAuthorization } from './interfaces/i-authorization.interface';
 // export * from './interfaces/i-campaign.interface';
-// export { AuthorizationService } from './services/authorization.service';
+export { AuthorizationService } from './services/authorization.service';
 // export { AccountService } from './services/account.service';
 // export { AdvertService } from './services/advert.service';
-// export { LocalStorageService, LocalStorageEnum } from './services/local-storage.service';
+export { LocalStorageService, LocalStorageEnum } from './services/local-storage.service';
 // export { CampaignService } from './services/campaign.service';
 // export { CountryService } from './services/country.service';
 // export { ICountry } from './interfaces/country.interface';
@@ -13,9 +13,9 @@
 export { ServiceLocator } from './service-locator';
 // export { AuthGuard } from './auth.guard';
 // export { AdvertGuard } from './advert.guard';
-// export { RoutingConsts } from './enums/routing-consts.enum';
+export { RoutingConsts } from './enums/routing-consts.enum';
 // export { CampaignStatusEnum } from './enums/campaign-status.enum';
-// export { AuthorizationErrorsEnum } from './enums/authorization-errors.enum';
+export { AuthorizationErrorsEnum } from './enums/authorization-errors.enum';
 export { Utils } from './utils';
 // export * from './value-reducer';
 export { IDropdown } from './components/dropdown/dropdown.component';
